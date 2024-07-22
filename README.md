@@ -1,5 +1,6 @@
 # HTML Edit (Web Dev IDE)
 ## What is it?
+![video preview](https://youtu.be/jxNE5apXRV8)
 HTML Edit is an IDE tailored specifically for web devs(but not limited to).
 You must be thinking "we already have vs code or other better options." <br>
 Yeah, I know but it's just a side project through which I aim to provide a ux similar to when you're using Visual Studio (not code) or Android Studio whereby it feels integrated (hence ide) rather than loose (code editor) where you have to add plugins for very basic features.
