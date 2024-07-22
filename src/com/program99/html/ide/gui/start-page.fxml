@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="527.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.program99.html.ide.gui.StartPageController">
+   <children>
+      <Pane fx:id="newPrjBtn" layoutX="14.0" layoutY="95.0" onMouseClicked="#switchToNewProjectPage" prefHeight="116.0" prefWidth="301.0" styleClass="big-button">
+         <children>
+            <Text layoutX="69.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Project" wrappingWidth="193.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="69.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new project from scratch. You can choose some libraries to use." wrappingWidth="210.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="229.0" prefHeight="116.0" prefWidth="301.0" styleClass="big-button" onMouseClicked="#openDirPicker">
+         <children>
+            <Text layoutX="69.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open Project" wrappingWidth="193.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="69.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open a downloaded or shared project stored locally." wrappingWidth="210.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="363.0" prefHeight="116.0" prefWidth="301.0" styleClass="big-button">
+         <children>
+            <Text layoutX="69.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clone Repo" wrappingWidth="193.13671875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="69.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open a project from a url such as git." wrappingWidth="210.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="29.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="330.0" layoutY="67.0" prefHeight="396.0" prefWidth="457.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Recent Projects">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutY="2.0" prefHeight="357.0" prefWidth="457.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Project Templates">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutY="1.0" prefHeight="358.0" prefWidth="457.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="690.0" layoutY="479.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" styleClass="primary" text="Exit" />
+      <CheckBox fx:id="showStartChBox" layoutX="14.0" layoutY="495.0" mnemonicParsing="false" onMouseClicked="#setToFalse" text="Show on startup" />
+   </children>
+   <stylesheets>
+      <URL value="@bootstrap3.css" />
+      <URL value="@he-ui.css" />
+   </stylesheets>
+</AnchorPane>

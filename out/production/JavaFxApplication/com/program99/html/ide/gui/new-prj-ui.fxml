@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="475.0" prefWidth="683.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.program99.html.ide.gui.NewPrjController">
+   <children>
+      <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Project">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="prjName" layoutX="169.0" layoutY="70.0" prefHeight="25.0" prefWidth="399.0" promptText="Project name (required)" />
+      <TextField fx:id="prjDir" layoutX="169.0" layoutY="114.0" prefHeight="25.0" prefWidth="399.0" promptText="Project location" />
+      <TextField fx:id="prjJS" layoutX="169.0" layoutY="159.0" prefHeight="25.0" prefWidth="399.0" promptText="Main Script file(default: index.js)" />
+      <TextField fx:id="prjCSS" layoutX="169.0" layoutY="200.0" prefHeight="25.0" prefWidth="399.0" promptText="Stylesheet (default: index.css)" />
+      <TextField fx:id="prjLib" layoutX="169.0" layoutY="262.0" prefHeight="25.0" prefWidth="399.0" promptText="External library URL" />
+      <TextFlow fx:id="nprjNotif" layoutY="349.0" prefHeight="79.0" prefWidth="683.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="349.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A new project will be created with the info you provided in the above fields." />
+         </children>
+      </TextFlow>
+      <Button fx:id="addLibBtn" layoutX="574.0" layoutY="261.0" mnemonicParsing="false" text="+" />
+      <Button fx:id="createBtn" layoutX="574.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#createPrj" prefHeight="32.0" prefWidth="87.0" styleClass="primary" text="Create" />
+      <Button fx:id="cancelBtn" layoutX="467.0" layoutY="436.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="87.0" text="Back" />
+      <Pane fx:id="pleaseWaitPane" layoutX="73.0" layoutY="45.0" prefHeight="385.0" prefWidth="563.0" visible="false">
+         <children>
+            <ProgressBar layoutX="97.0" layoutY="184.0" prefHeight="18.0" prefWidth="399.0" />
+            <Text layoutX="202.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creating Project..." textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="prjDirBtn" layoutX="585.0" layoutY="113.0" onMouseClicked="#openFileChooser" mnemonicParsing="false" text="Browse" />
+   </children>
+</AnchorPane>

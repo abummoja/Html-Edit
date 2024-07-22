@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="671.0" prefWidth="616.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.program99.html.ide.gui.MainEditorController">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="454.0" AnchorPane.bottomAnchor="455.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="2.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                  <Menu mnemonicParsing="false" text="New">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="File" />
+                      <MenuItem mnemonicParsing="false" text="Project" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#showProjectChooser" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Open recent" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Source">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Analyze">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Run">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tools">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Window">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ToolBar fx:id="topBar" layoutY="33.0" prefHeight="50.0" prefWidth="616.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+            <items>
+                <Button fx:id="testButton" mnemonicParsing="false" onMouseClicked="#tESTcLICKlISTENER" text="Button" />
+            </items>
+        </ToolBar>
+        <Button fx:id="lBtn" layoutX="461.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#toggleToolBar" prefHeight="9.0" prefWidth="34.0" text="L" />
+        <SplitPane dividerPositions="0.29797979797979796, 0.5" layoutY="82.0" prefHeight="406.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="81.0">
+            <items>
+                <SplitPane dividerPositions="0.5" maxWidth="300.0" minWidth="200.0" orientation="VERTICAL" prefHeight="399.0" prefWidth="148.0" style="-fx-background-color: gray;">
+                    <items>
+                        <TabPane minHeight="400.0" prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                            <Tab text="Project">
+                                <TreeView fx:id="projectFiles" />
+                            </Tab>
+                        </TabPane>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Properties">
+                           <content>
+                              <TextArea fx:id="propertiesText" editable="false" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                    </items>
+                </SplitPane>
+                <TabPane fx:id="tabHolder" prefHeight="399.0" prefWidth="319.0" />
+                <SplitPane dividerPositions="0.5" maxWidth="300.0" minWidth="200.0" orientation="VERTICAL" prefHeight="399.0" prefWidth="148.0" style="-fx-background-color: gray;">
+                    <items>
+                        <TreeView fx:id="documentTreeView" minHeight="400.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                    </items>
+                </SplitPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
